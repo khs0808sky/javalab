@@ -1,6 +1,7 @@
 package javalab.ch04;
 
-public class LoopEx {
+// Class 명을 변경할 경우 STS로 생성하였으므로 STS의 Refactor기능을 이용한다.
+public class WhileEx {
 
 	public static void main(String[] args) {
 		// 1 ~ 10의 정수의 총합을 구하여 출력하세요.
