@@ -6,6 +6,7 @@ public class SwitchEx1 {
 		// 경기 순위가 1등이면 "G", 2등이면 "S", 3등이면 "B", 그외 순위는 "A"로 출력하세요.
 		// 변수명 : 순위(ranking), 메달색(medalColor)
 		// if문
+
 		
 		int ranking = 1;
 		String medalColor;
