@@ -5,7 +5,7 @@ public class Phone {
 	private double price;
 	
 	public Phone(String model, double price) {
-		this.model = model;
+		this.model = model; // 멤버 변수가 객체별로 관리할 경우 this 지정.
 		this.price = price;
 	}
 
