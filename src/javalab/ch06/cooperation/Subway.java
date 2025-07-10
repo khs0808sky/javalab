@@ -43,6 +43,7 @@ public class Subway {
 		System.out.println(this.toString());
 	}
 	
+	// method overloading, Student 클래스에 의존성(dependency)이 발생됨
 	public void getIn(Student stud) {
 		++this.passengerCount;
 		this.money += 1300;
