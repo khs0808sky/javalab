@@ -1,5 +1,6 @@
 package javalab.ch08;
 
+// 자식들의 공통 속성, 메서드를 가지고 있는 클래스를 권장
 class Animal {
 	public void move() {
 		System.out.println("동물이 움직입니다.");
