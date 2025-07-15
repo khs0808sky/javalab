@@ -1,8 +1,10 @@
 package javalab.ch12;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 // List
 // 중복허용, 입력순서유지
@@ -41,20 +43,46 @@ public class ListEx {
 		
 		System.out.println("===== LinkedList =====");
 		
-		List<Integer> linked_list = new LinkedList<>();
+		List<Integer> link_list = new LinkedList<>();
 		
-		linked_list.add(1); // 등록
-		linked_list.add(2);
-		linked_list.add(3);
-		linked_list.add(4);
-		linked_list.add(5);
+		link_list.add(1); // 등록
+		link_list.add(2);
+		link_list.add(3);
+		link_list.add(4);
+		link_list.add(5);
 		
-		for (Integer i : linked_list) {
+		for (Integer i : link_list) {
 			System.out.println(i);
 		}
 		
-		System.out.println(linked_list.size());
-		System.out.println(linked_list.indexOf(3)); // 3이 있는 인덱스 출력 -> 있음(인덱스2)
-		System.out.println(linked_list.indexOf(7)); // 7이 있는 인덱스 출력 -> 없음(-1)
+		System.out.println(link_list.size());
+		System.out.println(link_list.indexOf(3)); // 3이 있는 인덱스 출력 -> 있음(인덱스2)
+		System.out.println(link_list.indexOf(7)); // 7이 있는 인덱스 출력 -> 없음(-1)
+		
+		List<Integer> link_list2 = new LinkedList<>() {
+			// 이중괄호 초기화 - 익명클래스를 이용한 방법. 익명클래스가 사용한 횟수만큼 생성됨
+			{add(1); add(2); add(3); add(4); add(5);}
+		};
+		link_list2.forEach((item) -> System.out.println(item));
+		
+		// 2. Set 인터페이스
+		// - 중복을 허용하지 않음. 입력순서가 유지되지 않음
+		System.out.println("===== Set =====");
+		
+		Set<Integer> hashSet = new HashSet<>(); // ctrl + shift + o -> 자동 import
+		
+		hashSet.add(1); // 등록
+		hashSet.add(3);
+		hashSet.add(2);
+		hashSet.add(3);
+		hashSet.add(3);
+		hashSet.add(5);
+		hashSet.add(4);
+		
+		for (Integer i : hashSet) {
+			System.out.println(i);
+		}
+		
+		System.out.println(hashSet.size());
 	}
 }
