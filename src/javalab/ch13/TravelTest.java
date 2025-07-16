@@ -16,6 +16,17 @@ public class TravelTest {
         customerList.stream()
         	.map(c -> c.getName())
         	.forEach(s -> System.out.println(s));
+        
+        System.out.println("=== 총 여행 비용 출력 ===");
+        int total = customerList.stream().mapToInt(c -> c.getPrice()).sum();
+        System.out.println(total + "원");
+        
+        System.out.println("=== 20세 이상 고객 명단 출력 ===");
+        customerList.stream()
+        	.filter(c -> c.getAge() >= 20)
+        	.map(c -> c.getName())
+        	.sorted()
+        	.forEach(s -> System.out.println(s));
 
 	}
 
