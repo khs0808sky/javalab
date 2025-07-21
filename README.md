@@ -104,10 +104,6 @@ do {
 * 조건 검사는 반복 이후에 수행
 
 ---
-
-### 📚 관련 키워드
-
-`if`, `else if`, `else`, `switch`, `for`, `while`, `do-while`, `break`, `continue`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -183,10 +179,6 @@ do {
     private String password;  // 외부에서 직접 접근 불가
 
 ---
-
-### 📚 관련 키워드
-
-`class`, `object`, `new`, `this`, `constructor`, `public`, `private`, `protected`, `default`, `method`, `field`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -234,10 +226,6 @@ do {
     System.out.println(p.getName());
 
 ---
-
-### 📚 관련 키워드
-
-`getter`, `setter`, `encapsulation`, `private`, `public`, `method`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -305,10 +293,6 @@ do {
                     .build();
 
 ---
-
-### 📚 관련 키워드
-
-`builder pattern`, `fluent interface`, `immutable object`, `design pattern`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -373,10 +357,6 @@ do {
     int size = list.size();
 
 ---
-
-### 📚 관련 키워드
-
-`singleton`, `design pattern`, `ArrayList`, `java.util`, `dynamic array`, `collection`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -441,10 +421,6 @@ do {
     }
 
 ---
-
-### 📚 관련 키워드
-
-`inheritance`, `extends`, `super`, `override`, `polymorphism`, `is-a 관계`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -492,10 +468,6 @@ do {
     a.sound();  // "멍멍" 출력
 
 ---
-
-### 📚 관련 키워드
-
-`interface`, `implements`, `abstract method`, `default method`, `multiple inheritance`, `polymorphism`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -537,10 +509,6 @@ do {
     }
 
 ---
-
-### 📚 관련 키워드
-
-`generic`, `type safety`, `type parameter`, `compile-time checking`, `code reuse`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -588,10 +556,6 @@ do {
          .forEach(System.out::println);  // "철수" 출력
 
 ---
-
-### 📚 관련 키워드
-
-`lambda`, `functional interface`, `Stream API`, `filter`, `map`, `forEach`, `functional programming`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
@@ -645,10 +609,6 @@ do {
     }
 
 ---
-
-### 📚 관련 키워드
-
-`exception`, `try`, `catch`, `finally`, `throw`, `throws`, `Exception handling`
 <br><br><br>
 📅[목차로 돌아가기](#-목차)
 <br><br><br>
