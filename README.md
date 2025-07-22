@@ -150,7 +150,7 @@ do {
 
 * 클래스는 하나의 설계도 같은 것.
 * 변수(=필드)랑 함수(=메서드)를 묶어 놓은 단위.
-* 이걸 바탕으로 실제 사용할 수 있는 \*\*객체(인스턴스)\*\*를 만들 수 있음.
+* 이걸 바탕으로 실제 사용할 수 있는 객체(인스턴스)를 만들 수 있음.
 
 ```java
 public class Person {
@@ -237,7 +237,6 @@ private String password;
 
 ---
 
-
 # 2025-07-07
 
 ## 📘 Java - Getter / Setter
@@ -246,44 +245,154 @@ private String password;
 
 ### ✅ Getter와 Setter란?
 
-- 클래스의 **private** 필드에 외부에서 접근하거나 값을 변경할 때 사용하는 메서드  
-- 캡슐화(encapsulation)를 위해 직접 필드에 접근하지 않고, 메서드를 통해 접근하도록 함
+* 클래스의 **private** 필드에 외부에서 바로 접근하지 못하게 막고,
+  대신 메서드를 통해 안전하게 값을 가져오거나(setter), 읽어오게(getter) 함
+* 이런 방식이 자바에서 말하는 캡슐화(encapsulation)의 핵심
 
 ---
 
 ### ✅ Getter 메서드
 
-    public class Person {
-        private String name;
+```java
+public class Person {
+    private String name;
 
-        public String getName() {
-            return name;
-        }
+    public String getName() {
+        return name;
     }
+}
+```
+
+* 보통 필드 이름 앞에 `get`을 붙여서 만듦
+* 반환형은 필드의 자료형과 동일함
 
 ---
 
 ### ✅ Setter 메서드
 
-    public class Person {
-        private String name;
+```java
+public class Person {
+    private String name;
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public void setName(String name) {
+        this.name = name;
     }
+}
+```
+
+* `set` + 필드 이름으로 만듦
+* 매개변수로 받은 값을 해당 필드에 저장
+* 여기서 `this.name = name;`은 **인스턴스 변수와 매개변수 이름이 같아서** 구분하기 위해 사용
 
 ---
 
 ### ✅ 사용 예시
 
-    Person p = new Person();
-    p.setName("철수");
-    System.out.println(p.getName());
+```java
+Person chulsu = new Person();
+chulsu.setName("철수");
+System.out.println(chulsu.getName());
+```
+
+* 철수라는 이름을 setter로 저장하고, getter로 꺼내 출력하는 예시
 
 ---
+
+## 📘 Java - static 키워드
+
+---
+
+### ✅ static이란?
+
+* `static`은 **클래스에 소속된 변수나 메서드**를 의미
+* 객체를 만들지 않아도 접근할 수 있음
+* 대표적인 예: `Math.random()`, `System.out.println()` 등
+
+---
+
+### ✅ static 변수
+
+```java
+public class Counter {
+    static int count = 0;
+
+    public Counter() {
+        count++;
+    }
+}
+```
+
+* `static` 변수는 모든 객체가 **공유**
+* 객체가 여러 개 만들어져도 하나의 `count` 값을 같이 씀
+
+---
+
+### ✅ static 메서드
+
+```java
+public class Util {
+    public static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+```java
+int result = Util.add(3, 5);
+```
+
+* 객체를 만들지 않고 `클래스명.메서드()` 형식으로 호출 가능
+* 주의: `static` 메서드 안에서는 `this` 사용 불가 (객체 정보가 없기 때문)
+
+---
+
+## 📘 Java - this 키워드
+
+---
+
+### ✅ this란?
+
+* 현재 객체 자기 자신을 가리키는 키워드
+* 지역 변수와 필드 이름이 같을 때 구분 용도로 자주 사용
+
+```java
+public class Person {
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;  // 여기서 this.name은 필드, name은 매개변수
+    }
+}
+```
+
+---
+
+### ✅ this의 다른 사용 예
+
+* 생성자에서 **다른 생성자 호출할 때도** `this()` 사용 가능
+
+```java
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name) {
+        this(name, 0); // 아래 생성자 호출
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-08
 
 ## 📘 Java - Builder 패턴
@@ -348,8 +457,11 @@ private String password;
                     .build();
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-09
 
 ## 📘 Java - 싱글톤 패턴과 ArrayList
@@ -411,8 +523,11 @@ private String password;
     int size = list.size();
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-10
 
 ## 📘 Java - 상속(Inheritance)
@@ -474,8 +589,11 @@ private String password;
     }
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-11
 
 ## 📘 Java - 인터페이스(Interface)
@@ -520,8 +638,11 @@ private String password;
     a.sound();  // "멍멍" 출력
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-14
 
 ## 📘 Java - 제네릭(Generic)
@@ -560,8 +681,11 @@ private String password;
     }
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-15
 
 ## 📘 Java - Lambda와 Stream
@@ -606,8 +730,11 @@ private String password;
          .forEach(System.out::println);  // "철수" 출력
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
+
 # 2025-07-16
 
 ## 📘 Java - 예외 처리 (Try-Catch)
@@ -658,5 +785,7 @@ private String password;
     }
 
 ---
+
 📅[목차로 돌아가기](#-목차)
-<br><br><br>
+
+---
